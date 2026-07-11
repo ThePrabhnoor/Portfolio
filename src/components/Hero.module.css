@@ -1,0 +1,142 @@
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headline {
+  font-size: clamp(2.6rem, 6vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: visible;
+}
+
+.wordWrapper {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.word {
+  display: inline-block;
+  will-change: transform;
+  color: var(--text-primary);
+}
+
+.subhead {
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.subheadItem {
+  color: var(--text-secondary);
+}
+
+.dot {
+  color: var(--text-muted);
+  font-size: 0.5rem;
+  opacity: 0.6;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background: var(--text-primary);
+  color: var(--bg-color);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  border-radius: 100px;
+  transition: opacity 0.2s ease;
+  will-change: transform;
+}
+
+.primaryBtn:hover {
+  opacity: 0.85;
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  border-radius: 100px;
+  border: 1px solid var(--glass-border);
+  transition: color 0.2s ease, border-color 0.2s ease;
+  will-change: transform;
+}
+
+.secondaryBtn:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 64px;
+  background: linear-gradient(to bottom, var(--text-muted), transparent);
+  border-radius: 1px;
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: clamp(2rem, 8vw, 3rem);
+    letter-spacing: -0.03em;
+  }
+  .scrollHint {
+    display: none;
+  }
+}

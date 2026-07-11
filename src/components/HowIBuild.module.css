@@ -1,0 +1,144 @@
+.buildSection {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+.stickyColumn {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scrollColumn {
+  padding-bottom: 10vh;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.intro {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--glass-border);
+}
+
+.question {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.philosophy {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Numbered Steps */
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.stepRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
+  cursor: default;
+  transition: padding-left 0.3s ease;
+}
+
+.stepRow:first-child {
+  border-top: 1px solid var(--glass-border);
+}
+
+.stepRow:hover {
+  padding-left: 0.5rem;
+}
+
+.stepNumber {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.stepRow:hover .stepNumber {
+  color: var(--text-secondary);
+}
+
+.stepLabel {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.stepRow:hover .stepLabel {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .buildSection {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .stickyColumn {
+    position: relative;
+    top: 0;
+  }
+
+  .scrollColumn {
+    padding-bottom: 0;
+  }
+
+  .intro {
+    font-size: 1.5rem;
+  }
+}

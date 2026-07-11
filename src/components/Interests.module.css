@@ -1,0 +1,62 @@
+.interestsSection {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+  margin-bottom: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.tag {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .interestsSection {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  
+  .tagsContainer {
+    gap: 1rem;
+  }
+  
+  .tag {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}

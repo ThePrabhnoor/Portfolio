@@ -1,0 +1,248 @@
+.projectsSection {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.sectionHeader {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.sectionTitle {
+  font-size: clamp(2.2rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.sectionTitle em {
+  font-style: italic;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.sectionSubtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Project List */
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.projectMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projectNumber {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.projectCategory {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Main Card */
+.projectCard {
+  padding: 36px 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  border-color: var(--glass-border);
+}
+
+.projectCard:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 40%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--project-color-rgb), 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .cardGlow {
+  opacity: 1.5;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.projectTitle {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem;
+}
+
+.projectRole {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.expandIcon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 4px;
+  transition: color 0.2s ease;
+}
+
+.projectCard:hover .expandIcon {
+  color: var(--text-primary);
+}
+
+.projectTagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.techBadge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.projectCard:hover .techBadge {
+  color: var(--text-secondary);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.outcomeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.outcomeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--project-color);
+  flex-shrink: 0;
+}
+
+.outcomeText {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--project-color);
+  letter-spacing: 0.03em;
+}
+
+/* Expanded Case Study */
+.caseStudy {
+  overflow: hidden;
+}
+
+.caseStudyInner {
+  padding: 36px 40px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.caseStudyItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.caseStudyLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.caseStudyValue {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    padding: 24px 20px;
+  }
+  .caseStudyInner {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    gap: 1.75rem;
+  }
+  .sectionHeader {
+    margin-bottom: 48px;
+  }
+  .projectsSection {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
